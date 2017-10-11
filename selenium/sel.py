@@ -1,8 +1,13 @@
-#coding = utf-8
+# coding=utf-8
 from selenium import webdriver
-#import sel
+from selenium.webdriver.common.keys import Keys
 
 browser = webdriver.Chrome()
-browser.get("http://www.baidu.com")
-
-browser.find_element_by_id("")
+browser.implicitly_wait(10)
+browser.get('http://music.163.com/')
+browser.maximize_window()
+#browser.switch_to_frame('g_iframe')
+#browser.find_element_by_xpath('//*[@id="auto-id-bbFJp7rpV6l1UiuZ"]').send_keys('2333')
+browser.find_element_by_class_name('txt').send_keys('2333')
+browser.find_element_by_class_name('txt').send_keys(Keys.ENTER)
+print (browser.page_source)
