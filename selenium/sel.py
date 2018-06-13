@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 
 browser = webdriver.Chrome()
 browser.implicitly_wait(10)
-browser.get('http://music.163.com/')
+browser.get('http://music.163.com/')#0613
 browser.maximize_window()
 #browser.switch_to_frame('g_iframe')
 #browser.find_element_by_xpath('//*[@id="auto-id-bbFJp7rpV6l1UiuZ"]').send_keys('2333')
