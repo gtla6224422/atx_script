@@ -1,0 +1,1 @@
+C:\Python27\Lib\unittest\loader.py这个模块在296行有写defaultTestLoader = TestLoader()，我们来看看TestLoader这个类第一行就看见testMethodPrefix = 'test'，也就是说如果你使用到defaultTestLoader，那么默认是以test开头的方法为一个用例，具体可以在TestLoader类中的getTestCaseNames得到实现,红字注释部分为什么testCaseClass要有call方法，我们后面提到。
