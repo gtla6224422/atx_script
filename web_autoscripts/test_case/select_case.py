@@ -2,6 +2,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.select import Select
+import sel
 import time
 import unittest
 
@@ -11,24 +12,28 @@ class csc_init(unittest.TestCase):
     browser.maximize_window()
     print"this is init!"
 
-    def test_login(self):
-        browser = self.browser
-        browser.find_element_by_id('username').send_keys('admin')
-        browser.find_element_by_id('password').send_keys('1234567890')
-        browser.find_element_by_name('submit').click()
-        browser.find_element_by_link_text('CSC7.5.0-227').click()  
+    def test_1(self):
+        self.browser.find_element_by_id('username').send_keys('admin')
+        self.browser.find_element_by_id('password').send_keys('1234567890')
+        self.browser.find_element_by_name('submit').click()
+        self.browser.find_element_by_link_text('CSC7.5.0-227').click()
 
-    def test_vm(self):
-        browser = self.browser
-        browser.find_element_by_css_selector('#menuListId > li:nth-child(4) > a').click()
+    def test_2(self):
+        #服务管理菜单-点击
+        time.sleep(2)
+        self.browser.find_element_by_link_text('服务xx管理').click()
+        sel.get_windows_img(self.browser)
 
-    def test_soft(self):
-        browser = self.browser
-        browser.find_element_by_css_selector('xxx').click()
+    def test_3(self):
+        #创建服务按钮-点击
+        time.sleep(2)
+        self.browser.find_element_by_css_selector('#page-content > div.page-body > div > div.col-md-9.vmsBox > div.widget > div.widget-body > div.table-toolbar.no-padding-top > div > div > a').click()
 
-    def tearDown(self):
-        browser = self.browser
-        browser.quit()
+    def test_4(self):
+        #磁盘服务tab-点击
+        #time.sleep(2)
+        self.browser.find_element_by_css_selector('#page-content > div.page-body > div.row > div.col-md-9.vmsBox > div.widget.margin-bottom-10 > div > div.tabbable.tooltipBox > ul > li:nth-child(2) > a').click()
+
 
 if __name__ == "__main__":
     unittest.main()
