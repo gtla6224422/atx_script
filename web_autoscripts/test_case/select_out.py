@@ -13,8 +13,5 @@ class csc_init(unittest.TestCase):
     def testout(self):
         print"outtttttttttttttttttttttttttttttt"
 
-    #def tearDown(self):
-        #print "end!!!!!!!"
-
 if __name__ == "__main__":
     unittest.main()

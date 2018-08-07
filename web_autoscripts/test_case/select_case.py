@@ -2,7 +2,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.select import Select
-import sel
+from selenium.common.exceptions import NoSuchElementException
+import optimize_report
 import time
 import unittest
 
@@ -21,13 +22,22 @@ class csc_init(unittest.TestCase):
     def test_2(self):
         #服务管理菜单-点击
         time.sleep(2)
-        self.browser.find_element_by_link_text('服务xx管理').click()
-        sel.get_windows_img(self.browser)
+        try:
+            self.browser.find_element_by_link_text('服务管理').click()
+        except NoSuchElementException as e:
+            optimize_report.get_windows_img(self.browser)
+            raise e
 
     def test_3(self):
         #创建服务按钮-点击
         time.sleep(2)
-        self.browser.find_element_by_css_selector('#page-content > div.page-body > div > div.col-md-9.vmsBox > div.widget > div.widget-body > div.table-toolbar.no-padding-top > div > div > a').click()
+        try:
+            self.browser.find_element_by_css_selector('#page-content > div.page-body > div > div.col-md-9.vmsBox > div.widget > div.widget-body > div.table-toolbar.no-padding-top > div > div > a').click()
+            optimize_report.get_windows_img(self.browser)
+        except NoSuchElementException as e:
+            optimize_report.get_windows_img(self.browser)
+            raise e
+
 
     def test_4(self):
         #磁盘服务tab-点击

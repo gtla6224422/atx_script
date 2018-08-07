@@ -123,9 +123,9 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">csc_init</h1>
 <p class='attribute'><strong>测试人员 : </strong> 懒</p>
-<p class='attribute'><strong>开始时间 : </strong> 2018-08-03 20:33:47</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:06.864000</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 5，通过 2，错误 3，通过率= 40.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2018-08-07 20:38:08</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:07.643000</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 5，通过 5，通过率= 100.00%</p>
 
 <p class='description'></p>
 </div>
@@ -133,9 +133,9 @@ function html_escape(s) {
 
 
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 40.00% }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 2 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 5 }</a>
 <a class="btn btn-info" href='javascript:showCase(3)'>所有{ 5 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
@@ -156,12 +156,12 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='errorClass warning'>
+<tr class='passClass warning'>
     <td>select_case.csc_init</td>
     <td class="text-center">4</td>
-    <td class="text-center">1</td>
+    <td class="text-center">4</td>
     <td class="text-center">0</td>
-    <td class="text-center">3</td>
+    <td class="text-center">0</td>
     <td class="text-center"><a href="javascript:showClassDetail('c1',4)" class="detail" id='c1'>详细</a></td>
 </tr>
 
@@ -170,112 +170,37 @@ function html_escape(s) {
     <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
 </tr>
 
-<tr id='ft1_2' class='none'>
-    <td class='errorCase'><div class='testcase'>test_2</div></td>
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_2</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_3</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
-    <div id='div_ft1_2' class="collapse">  -->
+    <button id='btn_pt1_3' type="button"  class="btn label-success btn-xs collapsed data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse">  -->
 
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
-    <div id='div_ft1_2' class="collapse in">
+    <button id='btn_pt1_3' type="button"  class="btn label-success btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse in">
     <pre>
     
-    1_2: Traceback (most recent call last):
-  File "D:\project_git_wzd\atx_script\web_autoscripts\test_case\select_case.py", line 24, in test_2
-    self.browser.find_element_by_link_text('服务xx管理').click()
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 421, in find_element_by_link_text
-    return self.find_element(by=By.LINK_TEXT, value=link_text)
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 957, in find_element
-    'value': value})['value']
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 314, in execute
-    self.error_handler.check_response(response)
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"服务xx管理"}
-  (Session info: chrome=68.0.3440.75)
-  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
-
-
-    <img hidden="hidden" src="" alt="picture_shot" height="200" width="400"></img>
-    <a  hidden="hidden"  href="">screen_shot</a>
+    1_3: 
+    <img  src="file:///D:/screenshots/20180807203815.png
+" alt="picture_shot" height="200" width="400"></img>
+    <a    href="file:///D:/screenshots/20180807203815.png
+">screen_shot</a>
 
     </pre>
     </div>
     </td>
 </tr>
 
-<tr id='ft1_3' class='none'>
-    <td class='errorCase'><div class='testcase'>test_3</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_ft1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_3'>错误</button>
-    <div id='div_ft1_3' class="collapse">  -->
-
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_ft1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_3'>错误</button>
-    <div id='div_ft1_3' class="collapse in">
-    <pre>
-    
-    1_3: Traceback (most recent call last):
-  File "D:\project_git_wzd\atx_script\web_autoscripts\test_case\select_case.py", line 30, in test_3
-    self.browser.find_element_by_css_selector('#page-content &gt; div.page-body &gt; div &gt; div.col-md-9.vmsBox &gt; div.widget &gt; div.widget-body &gt; div.table-toolbar.no-padding-top &gt; div &gt; div &gt; a').click()
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 591, in find_element_by_css_selector
-    return self.find_element(by=By.CSS_SELECTOR, value=css_selector)
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 957, in find_element
-    'value': value})['value']
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 314, in execute
-    self.error_handler.check_response(response)
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#page-content &gt; div.page-body &gt; div &gt; div.col-md-9.vmsBox &gt; div.widget &gt; div.widget-body &gt; div.table-toolbar.no-padding-top &gt; div &gt; div &gt; a"}
-  (Session info: chrome=68.0.3440.75)
-  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
-
-
-    <img hidden="hidden" src="" alt="picture_shot" height="200" width="400"></img>
-    <a  hidden="hidden"  href="">screen_shot</a>
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='ft1_4' class='none'>
-    <td class='errorCase'><div class='testcase'>test_4</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_ft1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_4'>错误</button>
-    <div id='div_ft1_4' class="collapse">  -->
-
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_ft1_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_4'>错误</button>
-    <div id='div_ft1_4' class="collapse in">
-    <pre>
-    
-    1_4: Traceback (most recent call last):
-  File "D:\project_git_wzd\atx_script\web_autoscripts\test_case\select_case.py", line 35, in test_4
-    self.browser.find_element_by_css_selector('#page-content &gt; div.page-body &gt; div.row &gt; div.col-md-9.vmsBox &gt; div.widget.margin-bottom-10 &gt; div &gt; div.tabbable.tooltipBox &gt; ul &gt; li:nth-child(2) &gt; a').click()
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 591, in find_element_by_css_selector
-    return self.find_element(by=By.CSS_SELECTOR, value=css_selector)
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 957, in find_element
-    'value': value})['value']
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 314, in execute
-    self.error_handler.check_response(response)
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#page-content &gt; div.page-body &gt; div.row &gt; div.col-md-9.vmsBox &gt; div.widget.margin-bottom-10 &gt; div &gt; div.tabbable.tooltipBox &gt; ul &gt; li:nth-child(2) &gt; a"}
-  (Session info: chrome=68.0.3440.75)
-  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
-
-
-    <img hidden="hidden" src="" alt="picture_shot" height="200" width="400"></img>
-    <a  hidden="hidden"  href="">screen_shot</a>
-
-    </pre>
-    </div>
-    </td>
+<tr id='pt1_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_4</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
 </tr>
 
 <tr class='passClass warning'>
@@ -311,10 +236,10 @@ NoSuchElementException: Message: no such element: Unable to locate element: {"me
 <tr id='total_row' class="text-center active">
     <td>总计</td>
     <td>5</td>
-    <td>2</td>
+    <td>5</td>
     <td>0</td>
-    <td>3</td>
-    <td>通过率：40.00%</td>
+    <td>0</td>
+    <td>通过率：100.00%</td>
 </tr>
 </table>
 
