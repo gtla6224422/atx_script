@@ -1,5 +1,5 @@
 #coding=utf8
-import atx
+import uiautomator2
 
 global DEVICE    #安卓硬件设备号，可通过adb device查看获得
 global APPID_WETEST    #app名，可通过adb shell pm list packages查看获得
@@ -10,7 +10,7 @@ global displayHeight #设备分辨率高度
 global displayWidth #设备分辨率宽度
 global APPID_GAME_TEST
 
-DEVICE = '4POB9DG6VCD6W4DA'  #安卓硬件设备号，可通过adb device查看获得
+DEVICE = 'CB5A1TLH5R'  #安卓硬件设备号，可通过adb device查看获得
 DEVICE_MI4 = 'd9998f96'
 APPID_WETEST = 'com.tencent.wefpmonitor'  #wetest-app名，可通过adb shell pm list packages查看获得
 APPID_GAME = 'com.ylbgj.rastar'  #苍之纪元-星辉包名

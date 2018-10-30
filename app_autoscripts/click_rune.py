@@ -4,6 +4,7 @@ import run_game
 import Global
 import run_game
 import atx
+import uiautomator2
 from atx.ext import report
 def click_rune(DEVICE,APPID_WETEST):
 	try:

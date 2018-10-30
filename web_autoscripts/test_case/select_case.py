@@ -32,7 +32,7 @@ class csc_init(unittest.TestCase):
         #创建服务按钮-点击
         time.sleep(2)
         try:
-            self.browser.find_element_by_css_selector('#page-content > div.page-body > div > div.col-md-9.vmsBox > div.widget > div.widget-body > div.table-toolbar.no-padding-top > div > div > a').click()
+            self.browser.find_element_by_css_selector('#xxpage-content > div.page-body > div > div.col-md-9.vmsBox > div.widget > div.widget-body > div.table-toolbar.no-padding-top > div > div > a').click()
             optimize_report.get_windows_img(self.browser)
         except NoSuchElementException as e:
             optimize_report.get_windows_img(self.browser)
