@@ -2,6 +2,7 @@
 
 import time
 import logging
+import os
 
 class BasePage():
     '''页面基础类'''
@@ -24,9 +25,18 @@ class BasePage():
     def open(self):
         self._open(self.base_url)
 
+    def implicitly_wait(self,time):     #隐性等待时间
+        self.driver.implicitly_wait(time)
+
     # 元素定位方法封装
     def find_element(self, *loc):
         return self.driver.find_element(*loc)
+
+    def hadle(self):
+        now_handle = self.driver.current_window_handle  #得到当前窗口句柄
+
+    def switch(self):
+        self.driver.switch_to_frame("g_iframe")
 
     #截图方法
     def get_windows_img(self):
