@@ -8,10 +8,10 @@ class BasePage():
     '''页面基础类'''
 
     # 初始化
-    def __init__(self, selenium_driver,base_url,pagetitle):
+    def __init__(self,selenium_driver,base_url):
         self.driver = selenium_driver
         self.base_url = base_url
-        self.pagetitle = pagetitle
+        #self.pagetitle = pagetitle
         self.timeout = 10
 
     # 打开不同的子页面
